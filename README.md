@@ -1,10 +1,10 @@
-git branch 02_image_network && git checkout 02_image_network && git add . && git commit -m "02_image_network" && git push --set-upstream origin 02_image_network
+git branch 03_local_image && git checkout 03_local_image && git add . && git commit -m "03_local_image" && git push --set-upstream origin 03_local_image
 
 # act1_screens_carapia
 
-# Task 2
+# Task 3
 
 ## Screenshot
 
-![02_exercise2](screenshots/exercise2.png)
+![03_exercise3](screenshots/exercise3.png)
 
