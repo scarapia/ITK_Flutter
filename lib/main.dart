@@ -12,10 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Container(
           child: Center(
-            child: OutlinedButton(
-              child: Text("Click me"),
-              onPressed: () {},
-            ),
+            child: Icon(Icons.heart_broken),
           ),
         ),
       ),
