@@ -1,10 +1,10 @@
-git branch 07_icon_heart && git checkout 07_icon_heart && git add . && git commit -m "07_icon_heart" && git push --set-upstream origin 07_icon_heart
+git branch 08_image_text_column && git checkout 08_image_text_column && git add . && git commit -m "08_image_text_column" && git push --set-upstream origin 08_image_text_column
 
 # act1_screens_carapia
 
-# Task 7
+# Task 8
 
 ## Screenshot
 
-![07_exercise7](screenshots/exercise7.png)
+![08_exercise8](screenshots/exercise8.png)
 
