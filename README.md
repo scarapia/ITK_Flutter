@@ -1,10 +1,10 @@
-git branch 08_image_text_column && git checkout 08_image_text_column && git add . && git commit -m "08_image_text_column" && git push --set-upstream origin 08_image_text_column
+git branch 09_circle_avatar && git checkout 09_circle_avatar && git add . && git commit -m "09_circle_avatar" && git push --set-upstream origin 09_circle_avatar
 
 # act1_screens_carapia
 
-# Task 8
+# Task 9
 
 ## Screenshot
 
-![08_exercise8](screenshots/exercise8.png)
+![09_exercise9](screenshots/exercise9.png)
 

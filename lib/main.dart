@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.green,
       body: Container(
           height: double.infinity,
           width: double.infinity,
@@ -20,12 +20,15 @@ class MyApp extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.network(
-                    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"),
+                CircleAvatar(
+                  child: Container(child: Image.asset('images/image2.jpg')),
+                ),
                 SizedBox(
                   height: 40,
                 ),
-                Text("AppMaking")
+                Text("AppMaking"),
+                Text(""),
+                Text("Hello world"),
               ],
             ),
           )),
