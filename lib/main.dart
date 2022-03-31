@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Container(
           child: Center(
-            child: ElevatedButton(
+            child: TextButton(
               child: Text("Click me"),
               onPressed: () {},
             ),
