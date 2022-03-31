@@ -10,8 +10,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: Center(
-          child: Container(child: Image.asset('images/image2.jpg')),
+        body: Container(
+          child: Center(
+            child: ElevatedButton(
+              child: Text("Click me"),
+              onPressed: () {},
+            ),
+          ),
         ),
       ),
     );
