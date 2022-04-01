@@ -9,34 +9,27 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.white,
       body: Container(
-          height: double.infinity,
-          width: double.infinity,
+        padding: EdgeInsets.all(16.0),
+          
           child: Container(
-            height: 300,
-            width: 200,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.network(
-                    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"),
+                CircleAvatar(
+                  child: Container(child: Image.asset('images/image2.jpg')),
+                ),
+                Container(width: 20,),
+                
+                Text("APPMAKING.COM", style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                
+                Icon(Icons.heart_broken),
                 SizedBox(
-                  height: 40,
+                  width: 40,
                 ),
-                ElevatedButton(
-                  child: Text("Continue with Google"),
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.pink,
-                  ),
-                ),
-                ElevatedButton(
-                  child: Text("Continue with Facebook"),
-                  onPressed: () {},
-                ),
-                Text("You agree to the terms and conditions")
               ],
             ),
           )),
