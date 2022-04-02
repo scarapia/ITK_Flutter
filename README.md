@@ -1,4 +1,4 @@
-git branch 11_row_text_icon && git checkout 11_row_text_icon && git add . && git commit -m "11_row_text_icon" && git push --set-upstream origin 11_row_text_icon
+git branch 12_sign_in_google_button && git checkout 12_sign_in_google_button && git add . && git commit -m "12_sign_in_google_button" && git push --set-upstream origin 12_sign_in_google_button
 
 # act1_screens_carapia
 
@@ -6,5 +6,5 @@ git branch 11_row_text_icon && git checkout 11_row_text_icon && git add . && git
 
 ## Screenshot
 
-![11_exercise11](screenshots/exercise11.png)
+![12_exercise12](screenshots/exercise12.png)
 

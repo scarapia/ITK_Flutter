@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,28 +12,31 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
       backgroundColor: Colors.white,
       body: Container(
-        padding: EdgeInsets.all(16.0),
-          
-          child: Container(
+        
+         child: Column(
+           
+           mainAxisAlignment: MainAxisAlignment.center,
+           
+           crossAxisAlignment: CrossAxisAlignment.center,
+           children: [
+             Row(
+               crossAxisAlignment: CrossAxisAlignment.start,
+             ),
             
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                CircleAvatar(
-                  child: Container(child: Image.asset('images/image2.jpg')),
-                ),
-                Container(width: 20,),
-                
-                Text("APPMAKING.COM", style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                
-                Icon(Icons.heart_broken),
-                SizedBox(
-                  width: 40,
-                ),
-              ],
-            ),
-          )),
-    ));
+
+             SignInButton(
+               Buttons.Google,
+               onPressed: () {},
+             ),
+           ],
+         ),
+         ),
+    )
+    
+    );
+    
   }
+  
 }
+
+
