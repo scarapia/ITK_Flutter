@@ -11,43 +11,118 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      body: Center(
-        child: Container(
-          height: 300,
-          width: 300,
-          color: Colors.grey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CircleAvatar(child: Image.asset('images/image2.jpg')),
-              SizedBox(
-                height: 40,
-              ),
-              Text(
-                "APPMAKING.COM",
-                style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-              ),
-              Text("Follow us"),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(Icons.facebook),
-                  CircleAvatar(
-                    child: Image.asset('images/twitter.png'),
+      body: Container(
+  color: Colors.grey[300],
+  width: double.infinity,
+  height: double.infinity,
+
+  child: Row( //Begin Row 1
+
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    crossAxisAlignment: CrossAxisAlignment.center,
+
+    children: [ // Contents of Row 1
+
+      Column( // Begin Col 1 in Row 1
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+        children: [ // Contents of Col1 in Row 1
+          Container( //Facebook icon and text
+            height: 100,
+            width: 100,
+            color: Colors.white,
+            child: Column(
+                    children: [
+                      CircleAvatar(
+                        child: Image.asset('images/facebook.png'),
+                          ),
+                      Text("Facebook", style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),), 
+               //End of Content Col 1 Row 1 (facebook and text)
+                        ],
                   ),
+            ),
+
+            Container( //Contents of Col1 in Row 2
+              height: 100,
+              width: 100,
+              color: Colors.white,
+              child: Column(
+                children: [
                   CircleAvatar(
                     child: Image.asset('images/instagram.jpg'),
                   ),
-                  Icon(Icons.apple),
+                  Text("Instagram",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                //End of Content in Col 1 Row 2 (instagram and text)
+                ],//children container
+                ),
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              color:Colors.white,
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    child: Image.asset('images/telegram.png'),
+                  ),
+                  Text('Telegram',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
                 ],
-              )
-              //Icon(Icons.facebook)
-            ],
-          ),
-        ),
+                ),
+            )
+        ], //end children column
       ),
-    ));
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(
+            height: 100,
+            width: 100,
+            color: Colors.white,
+            child: Column(
+              children: [
+                CircleAvatar(
+                  child: Image.asset('images/twitter.png'),
+                ),
+                Text('Twitter',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+              ],
+              ),
+          ),
+          Container(
+            height: 100,
+            width: 100,
+            color: Colors.white,
+            child: Column(
+              children: [
+                CircleAvatar(
+                  child: Image.asset('images/youtube.png'),
+                ),
+                Text('Youtube',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+              ],
+
+            ),
+          ),
+          Container(
+            height: 100,
+            width: 100,
+            color: Colors.white,
+            child: Column(
+              children: [
+                CircleAvatar(
+                  child: Image.asset('images/star.png'),
+                ),
+                Text('Rate the App',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+              ],
+              ),
+          )
+        ],
+      )
+    ], // end children row
+  ),
+      ),
+        )
+  
+    );
   }
 }
