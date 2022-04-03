@@ -12,50 +12,120 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: Container(
-             height: double.infinity,
-          width: double.infinity,
-          child: Container(
-            
-            height: 500,
-            width: 500,
-            
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              
-              children: [
-                FittedBox(
-                  child: Image.network(
-                    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
-                    fit:BoxFit.fill),
-                  
-                ),
-                
-               
-                
-                    
-                     SignInButton(
-                        Buttons.Google,
-                        onPressed: () {},
-                      ),
-                    ElevatedButton(
-                        child:  
-                          Text("Continue with Facebook"),
-                          onPressed: () {},
-                  ),
-                    Text("You agree to the terms and conditions"),
-              
-                  
-                
-                
-              ],
-            ),
-              
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text("Contact Form"),
+              TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(), hintText: "Name"),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(), hintText: "Email"),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(), hintText: "Mobile"),
+              ),
+              TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(), hintText: "Password"),
+              ),
+              Text("Gender"),
+              MyStatefulWidgetRadio(), //RadioButton
+              MyStatefulWidgetCheck(),
+              Text("By signing up, I accept the terms and conditions"),
+
+              ElevatedButton(onPressed: () {}, child: Text("Submit"))
+            ],
+          ),
         ),
-      
+      ),
+    );
+  }
+}
+
+enum Gender { Male, Female }
+
+class MyStatefulWidgetRadio extends StatefulWidget {
+  const MyStatefulWidgetRadio({Key? key}) : super(key: key);
+
+  @override
+  State<MyStatefulWidgetRadio> createState() => _MyStatefulWidgetRadioState();
+}
+
+class _MyStatefulWidgetRadioState extends State<MyStatefulWidgetRadio> {
+  Gender? _character = Gender.Male;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        ListTile(
+          title: const Text('Male'),
+          leading: Radio<Gender>(
+            value: Gender.Male,
+            groupValue: _character,
+            onChanged: (Gender? value) {
+              setState(() {
+                _character = value;
+              });
+            },
           ),
+        ),
+        ListTile(
+          title: const Text('Female'),
+          leading: Radio<Gender>(
+            value: Gender.Female,
+            groupValue: _character,
+            onChanged: (Gender? value) {
+              setState(() {
+                _character = value;
+              });
+            },
           ),
-      );
+        ),
+      ],
+    );
+  }
+}
+
+class MyStatefulWidgetCheck extends StatefulWidget { //Check box
+  const MyStatefulWidgetCheck({Key? key}) : super(key: key);
+
+  @override
+  State<MyStatefulWidgetCheck> createState() => _MyStatefulWidgetCheckState();
+}
+
+class _MyStatefulWidgetCheckState extends State<MyStatefulWidgetCheck> {
+  bool isChecked = false;
+
+  @override
+  Widget build(BuildContext context) {
+    Color getColor(Set<MaterialState> states) {
+      const Set<MaterialState> interactiveStates = <MaterialState>{
+        MaterialState.pressed,
+        MaterialState.hovered,
+        MaterialState.focused,
+      };
+      if (states.any(interactiveStates.contains)) {
+        return Colors.blue;
+      }
+      return Colors.red;
+    }
+
+    return Checkbox(
+      checkColor: Colors.white,
+      fillColor: MaterialStateProperty.resolveWith(getColor),
+      value: isChecked,
+      onChanged: (bool? value) {
+        setState(() {
+          isChecked = value!;
+        });
+      },
+    );
   }
 }
