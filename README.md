@@ -1,10 +1,10 @@
-git branch 19_textfield_radio_check && git checkout 19_textfield_radio_check && git add . && git commit -m "19_textfield_radio_check" && git push --set-upstream origin 19_textfield_radio_check
+git branch 20_item_sale && git checkout 20_item_sale && git add . && git commit -m "20_item_sale" && git push --set-upstream origin 20_item_sale
 
 # act1_screens_carapia
 
-# Task 19
+# Task 20
 
 ## Screenshot
 
-![19_exercise19](screenshots/exercise19.png)
+![20_exercise20](screenshots/exercise20.png)
 
