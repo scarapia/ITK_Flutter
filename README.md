@@ -1,10 +1,10 @@
-git branch 22_grid_view_1 && git checkout 22_grid_view_1 && git add . && git commit -m "22_grid_view_1" && git push --set-upstream origin 22_grid_view_1
+git branch 23_grid_view_2 && git checkout 23_grid_view_2 && git add . && git commit -m "23_grid_view_2" && git push --set-upstream origin 23_grid_view_2
 
 # act1_screens_carapia
 
-# Task 22
+# Task 23
 
 ## Screenshot
 
-![22_exercise22](screenshots/exercise22.png)
+![23_exercise23](screenshots/exercise23.png)
 
